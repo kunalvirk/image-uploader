@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card/Card";
+import styled from "styled-components";
+
+const AppDiv = styled.div`
+  display:flex;
+  height:100%;
+  justify-content:center;
+  align-items:center;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppDiv className="App">
+      <Card />
+      <div className="footer">
+        <p>Developed by <a href="https://github.com/kunalvirk">kunalvirk</a> | Inspired from <a href="https://devchallenges.io/">devchallenges.io</a></p>
+      </div>
+    </AppDiv>
   );
 }
 

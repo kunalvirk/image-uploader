@@ -1,13 +1,133 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html, body {
+    height: 100%;
+    background-color: #FAFAFB;
+    font-family: 'Poppins';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.heading {
+    font-weight: 500;
+    font-size:18px;
+    color:#4F4F4F;
+    text-align:center;
+    margin:0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.subheading {
+    text-align:center;
+    font-size:10px;
+    font-weight:500;
+    color:#828282;
+    margin-top:15px;
+}
+.dropzone {
+    background: #F6F8FB;
+    border: 1px dashed #97BEF4;
+    border-radius: 12px;
+    text-align: center;
+    min-height: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    padding: 35px 0 40px;
+    flex-wrap: wrap;
+}
+.show-rejected {
+    width: 100%;
+    display: inline-block;
+    list-style: none;
+    margin: 30px 0 0;
+    padding: 0 20px;
+    text-align: left;
+    font-size: 12px;
+}
+.show-rejected > ul li {
+    margin-top: 10px;
+}
+.dropzone .droparea img {
+    margin-bottom: 35px;
+}
+
+p.text-dim {
+    margin:0;
+    padding: 0;
+    color: #BDBDBD;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-area > button {
+    background-color: #2F80ED;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 0px #767676;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+.footer-area > button:hover {
+    box-shadow: 0px 0px 10px -5px #767676;
+    background-color: #1e64c0;
+}
+.img-preview-wrapper {
+    border-radius: 12px;
+    text-align: center;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+    overflow: hidden;
+    min-height: 220px;
+    background: #F6F8FB;
+    border: 1px dashed #97BEF4;
+}
+.img-preview-wrapper > img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    max-height: 220px;
+}
+.img-copy {display:flex; width:100%; background: #F6F8FB; border: 1px solid #E0E0E0; border-radius: 8px; align-items:center; padding:2px; margin-top:25px;}
+.img-copy .img-url-box {max-width:100%; overflow: hidden; white-space: nowrap; text-overflow:ellipsis; font-size:12px; padding:10px}
+.img-copy .img-copy-btn {flex-shrink:0;}
+.img-copy .img-copy-btn button {background: #2F80ED;
+border-radius: 8px; border:none; color:#fff; width:100%; padding:12px 18px; font-size:12px; cursor: pointer;}
+.heading::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-bottom: 15px;
+}
+.heading.init::before,.heading.uploading::before {display: none;}
+.heading.failed::before {
+    background-image: url('../public/error-icon.png');
+}
+.heading.uploaded::before {
+    background-image: url('../public/check-icon.png');
+}
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #747474;
 }
